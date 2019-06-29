@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
-face_cascade=cv2.CascadeClassifier('/home/chirag/Desktop/machine-learning-june-2019/haarcascade_frontalface_alt.xml')
+face_cascade=cv2.CascadeClassifier('/home/chirag/Desktop/chirag_ml/Lecture_03/haarcascade_frontalface_alt.xml')
 cam=cv2.VideoCapture(0)
 cnt=0
 face_data=[]
