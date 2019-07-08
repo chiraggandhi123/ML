@@ -5,7 +5,7 @@ nose_cascade=cv2.CascadeClassifier('/home/chirag/Desktop/chirag_ml/Assignment/Sn
 cam=cv2.VideoCapture(0)
 cnt=0
 moustache=cv2.imread('/home/chirag/Desktop/chirag_ml/Assignment/Snapchat_filter/Traini/mustache.png')
-#face_data=[]
+#face_data=[]   
 #u_name=input()
 while(True):
     ret,img=cam.read()
@@ -14,7 +14,9 @@ while(True):
     for (x,y,w,h) in faces:
         A=cv2.rectangle(img,(x,y),(x+w,y+h),(0,0,255),2)
         #cv2.putText(gray,'chirag',(10,50),cv2.FONT_HERSHEY_COMPLEX,0,15,(255,255,255),2,cv2.LINE_AA)
-        face_section=img([y:y+h,x])
+        #face_section=img[(y:y+h),x]
+
+        
         face_section=cv2.resize(face_section,(100,100))
         cv2.imshow('face',face_section)
         #A=A+moustache
